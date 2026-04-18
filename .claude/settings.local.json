@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 Chrome/124 Safari/537.36\" \"https://nte.iwplay.com.tw/news/view/20260326/b9ef591b.html\")",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s \"https://nitter.net/NTE_JP/rss\")",
+      "Bash(curl -sv \"https://nitter.net/NTE_JP/rss\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://nte.perfectworld.com/jp/article/news/gamenews/index.html\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://nte.perfectworld.com/jp/article/news/gameevent/index.html\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://nte.perfectworld.com/jp/article/news/gamebroad/index.html\")"
+    ]
+  }
+}

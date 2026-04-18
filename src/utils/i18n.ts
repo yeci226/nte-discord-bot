@@ -1,0 +1,51 @@
+import en from "../assets/languages/en";
+import tw from "../assets/languages/tw";
+
+const langs: Record<string, any> = { en, tw };
+
+export interface Translator {
+  (key: string, options?: any, ...args: any[]): any;
+  lang: string;
+}
+
+export function createTranslator(lang: string): Translator {
+  const selectedLang = langs[lang] ? lang : "en";
+  const content = langs[selectedLang];
+
+  const tr = function tr(key: string, options?: any, ...args: any[]) {
+    let str = content[key] ?? langs["en"][key] ?? key;
+
+    if (typeof str === "function") return str(options, ...args);
+    if (typeof str !== "string") return str;
+
+    if (options && typeof options === "object") {
+      for (const [k, value] of Object.entries(options)) {
+        str = str.replace(new RegExp(`<${k}>`, "g"), String(value));
+        str = str.replace(new RegExp(`{${k}}`, "g"), String(value));
+      }
+    }
+
+    if (args.length > 0) {
+      for (let i = 0; i < args.length; i++) {
+        str = str.replace(new RegExp(`%${i}%`, "g"), String(args[i]));
+        str = str.replace("%s", String(args[i]));
+      }
+    }
+
+    return str;
+  } as Translator;
+
+  tr.lang = selectedLang;
+  return tr;
+}
+
+export function toI18nLang(locale: string): string {
+  if (locale === "zh-TW" || locale === "zh-HK" || locale === "zh-CN") return "tw";
+  return "en";
+}
+
+export function toNewsLang(locale: string): import("../services/NteNewsService").NewsLang {
+  if (locale === "zh-TW" || locale === "zh-HK") return "tw";
+  if (locale === "zh-CN") return "cn";
+  return "en";
+}
