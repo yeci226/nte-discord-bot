@@ -1,8 +1,13 @@
 <div align="center">
 
+<img src="src/assets/images/pfp.jpg" alt="Banner" width="25%" />
+
+<br />
+<br />
+
 # NTE Discord Bot
 
-**A New Trailers Embark news companion bot for Discord**
+**A Neverness to Everness news companion bot for Discord**
 
 [![Discord.js](https://img.shields.io/badge/discord.js-v14-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.js.org)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
@@ -84,7 +89,7 @@ yarn start
 
 | Command        | Description                                          |
 | -------------- | ---------------------------------------------------- |
-| `/news bind`   | Subscribe a channel to NTE news updates              |
+| `/news bind`   | Subscribe a channel to Neverness to Everness news updates              |
 | `/news unbind` | Remove a channel's news subscription                 |
 | `/news force`  | Manually trigger a re-send of the latest news        |
 
@@ -109,6 +114,6 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 <div align="center">
 
-Made with dedication for the New Trailers Embark community
+Made with dedication for the Neverness to Everness community
 
 </div>

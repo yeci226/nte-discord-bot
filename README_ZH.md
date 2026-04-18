@@ -1,8 +1,13 @@
 <div align="center">
 
-# NTE Discord Bot
+<img src="src/assets/images/pfp.jpg" alt="Banner" width="25%" />
 
-**專為 新旅人 打造的 Discord 機器人**
+<br />
+<br />
+
+# Neverness to Everness Discord Bot
+
+**專為 Neverness to Everness 打造的 Discord 機器人**
 
 [![Discord.js](https://img.shields.io/badge/discord.js-v14-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.js.org)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
@@ -21,7 +26,7 @@
 
 | 功能           | 說明                                             |
 | -------------- | ------------------------------------------------ |
-| **最新消息**   | 自動將 NTE 官方公告推送至指定頻道               |
+| **最新消息**   | 自動將 Neverness to Everness 官方公告推送至指定頻道               |
 | **多語言支援** | 支援繁體中文、簡體中文、英文、日文               |
 | **內容篩選**   | 依類別篩選：全部、新聞、活動、系統、推文         |
 | **角色 Ping**  | 有新內容時自動 Ping 指定身分組                   |
@@ -83,7 +88,7 @@ yarn start
 
 | 指令           | 說明                           |
 | -------------- | ------------------------------ |
-| `/news bind`   | 訂閱頻道接收 NTE 最新消息      |
+| `/news bind`   | 訂閱頻道接收 Neverness to Everness 最新消息      |
 | `/news unbind` | 取消頻道的新聞訂閱             |
 | `/news force`  | 手動強制重新發送最新消息       |
 
@@ -108,6 +113,6 @@ yarn start
 
 <div align="center">
 
-為 新旅人 社群用心打造
+為 Neverness to Everness 社群用心打造
 
 </div>
