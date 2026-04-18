@@ -14,7 +14,7 @@ function findCommandFiles(dir: string): string[] {
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {
       results = results.concat(findCommandFiles(filePath));
-    } else if (file.endsWith(".ts") || file.endsWith(".js")) {
+    } else if ((file.endsWith(".ts") && !file.endsWith(".d.ts")) || file.endsWith(".js")) {
       results.push(filePath);
     }
   }
